@@ -1,18 +1,70 @@
+.parrafo_1 {
+   color: white;
+   font-style: bold;
+}
 
-body {
+.parrafo_2 {
+    color: white;
+    font-style: bold;
+    font-size: 25px;
+}
+
+.pie_de_pagina {
+    color: white;
+    background-color: black;
+    font-style: italic;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+.titulo_principal {
     color: blue;
-    background-color: rgb(167, 192, 236);
-}
-
-p {
-   color: black; 
-}
-
-h3 {
-    color: black;
-}
-
-h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
+    border: 7px black;
+    border-style: double;
+    padding: 10px;
+    text-shadow: 2px 2px white;
 }
+
+.seccion_principal{
+    width: 500px;
+    border: 10px solid darkgreen;
+    padding: 10px;
+}
+
+span {
+    color: white;
+    background-color: black;
+}
+
+body {
+    background: #15537C;
+    background: -moz-linear-gradient(left, #15537C 0%, #2CAAFF 50%, #0E3853 100%);
+    background: -webkit-linear-gradient(left, #15537C 0%, #2CAAFF 50%, #0E3853 100%);
+    background: linear-gradient(to right, #15537C 0%, #2CAAFF 50%, #0E3853 100%);
+}
+
+.botones{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px;
+    border-radius: 20px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(to right, rgb(21, 83, 124) 0%, rgb(39, 149, 224) 50%, rgb(14, 56, 83) 100%);
+    box-shadow: black 5px 5px 15px 5px;
+    border: 2px solid rgb(28, 110, 164);
+    display: inline-block;
+    margin-left: 20px;}
+    .botones:hover {
+        background: #15537C;}
+    .botones:active {
+        background: #0E3853;}
