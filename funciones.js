@@ -1,22 +1,37 @@
-async function consulta(){
+document.getElementById('bt1').onclick = async function consulta(){
     let person = await fetch("https://randomuser.me/api/")
                         .then(response => response.json())
                         .then(data => data)
     console.log(person)
     document.getElementById("demo").innerHTML =
-        "<img src="+person.results[0].picture.large+">"+
-        "<br><br>Nombre: "+person.results[0].name.first+
-        "<br><br>Apellido: "+ person.results[0].name.last+
-        "<br><br>Género: "+ person.results[0].gender+
-        "<br><br>Nac: "+ person.results[0].dob.date+
-        "<br><br>Edad: "+ person.results[0].dob.age+
-        "<br><br><span class='material-symbols-outlined'>drafts</span>"+
-        "<br>E-mail: "+ person.results[0].email+
-        "<br><span class='material-symbols-outlined'>home</span>"+
-        "<br>Ciudad: "+ person.results[0].location.city+
-        "<br><br>Estado: "+ person.results[0].location.state+
-        "<br><br>País: "+ person.results[0].location.country;
-        //console.log(ajax())
+        "<img src="+person.results[0].picture.large+" alt='My picture' />"+
+        "<br><br><span class='material-symbols-outlined'>person</span>"+
+        "<ul><li>Nombre: "+person.results[0].name.first+"</li>"+
+        "<br><li>Apellido: "+ person.results[0].name.last+"</li>"+
+        "<br><li>Género: "+ person.results[0].gender+"</li>"+
+        "<br><li>Nac: "+ person.results[0].dob.date+"</li>"+
+        "<br><li>Edad: "+ person.results[0].dob.age+"</li></ul>"+
+        "<span class='material-symbols-outlined'>drafts</span>"+
+        "<ul><li>E-mail: "+ person.results[0].email+"</li></ul>"+
+        "<span class='material-symbols-outlined'>home</span>"+
+        "<ul><li>Ciudad: "+ person.results[0].location.city+"</li>"+
+        "<br><li>Estado: "+ person.results[0].location.state+"</li>"+
+        "<br><li>País: "+ person.results[0].location.country+"</li></ul>";
 }
 
-consulta()
+document.getElementById('bt2').onclick = function (){
+    document.getElementById("demo").innerHTML =
+        "<form action='' method=''> "+ "<p class='parrafo_2'>Ingrese sus datos y será contactado a la brevedad</p>" +
+            "<label>Empresa </label>" +
+            "<input type='text' name='Empresa' placeholder='Nombre de la Empresa' />"+"<br>" +
+            "<label>Nombre </label>" +
+            "<input type='text' name='Nombre' placeholder='Ingrese su Nombre' />"+
+            "<label> Apellido </label>"+
+            "<input type='text' name='Apellido' placeholder='Ingrese su Apellido' />"+
+            "<label>Teléfono </label>"+
+            "<input type='tel' name='Teléfono' placeholder='Ingrese su Teléfono' />"+
+            "<label> E-mail </label>"+
+            "<input type='email' name='E-mail' placeholder='Ingrese su E-mail' />"+
+            "<input class='botones' type='submit' value='Enviar' />"+
+        "</form>";
+}
