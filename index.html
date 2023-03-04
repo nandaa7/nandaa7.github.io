@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +13,20 @@
 </head>
 <body>
 
-    <h1>Mi Currículum Vitae</h1>
+    <section class="seccion_principal">
+        <h1 class="titulo_principal">Mi Currículum Vitae</h1>
 
-    <script src="funciones.js"></script>
+        <nav>
+            <input class="botones" id="bt1" type="button" value="Mis datos" >
+            <input class="botones" id="bt2" type="button" value="Contact to me" >
+        </nav>
 
-    <p id = "demo"></p>
-    
-    <h3>Curso: Primeros pasos en el desarrollo Front-End</h3>
+        <script src="funciones/funciones.js"></script>
 
+        <p class="parrafo_1" id = "demo"></p>
+
+        <h3 class="pie_de_pagina">Curso: Primeros pasos en el desarrollo Front-End</h3>
+    </section>
 
 </body>
 </html>
